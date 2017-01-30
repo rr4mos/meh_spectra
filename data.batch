@@ -1,0 +1,64 @@
+arrange (2,1,.1,.6,.6,ON,ON,ON)
+
+FOCUS G0
+
+READ XY "./4est/allspec2ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec25ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec3ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec35ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec4ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec45ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec5ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec55ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec6ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec65ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec7ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec75ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec8ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec85ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec9ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec95ns_4estfull-UV_Lbroad-10nm.dat"
+READ XY "./4est/allspec10ns_4estfull-UV_Lbroad-10nm.dat"
+
+S0 line color 1
+S0 legend "2.0 ns"
+S1 line color 1
+S1 legend "2.5 ns"
+S2 line color 1
+S2 legend "3.0 ns"
+S3 line color 1
+S3 legend "3.5 ns"
+S4 line color 1
+S4 legend "4.0 ns"
+S5 line color 1
+S5 legend "4.5 ns"
+S6 line color 1
+S6 legend "5.0 ns"
+S7 line color 1
+S7 legend "5.5 ns"
+S8 line color 1
+S8 legend "6.0 ns"
+S9 line color 1
+S9 legend "6.5 ns"
+S10 line color 1
+S10 legend "7.0 ns"
+S11 line color 1
+S11 legend "7.5 ns"
+S12 line color 1
+S12 legend "8.0 ns"
+S13 line color 1
+S13 legend "8.5 ns"
+S14 line color 1
+S14 legend "9.0 ns"
+S15 line color 1
+S15 legend "9.5 ns"
+S16 line color 1
+S16 legend "10. ns"
+
+
+FOCUS G1
+READ XY "./4est/allspec2ns_4estfull-UV_Lbroad-10nm.dat"
+G1.S0.y = (G0.S0.y + G0.S1.y + G0.S2.y + G0.S3.y + G0.S4.y + G0.S5.y + G0.S6.y + G0.S7.y + G0.S8.y + G0.S9.y + G0.S10.y + G0.S11.y + G0.S12.y + G0.S13.y + G0.S14.y + G0.S15.y + G0.S16.y)/17.
+
+
+
