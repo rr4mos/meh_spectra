@@ -75,13 +75,13 @@ for i in range(len(ALLtrans)):
 for i in range(len(sortT)):
 	ALLtrans[i]=sortT[i]
 
-i=0
-for each in ALLtrans:
-	print '***', selectedTrans[i]
-	for each2 in each:	
-		print  each2
-	print '***'
-	i+=1
+#i=0
+#for each in ALLtrans:
+#	print '***', selectedTrans[i]
+#	for each2 in each:	
+#		print  each2
+#	print '***'
+#	i+=1
 #exit()
 i = 0
 for each in ALLtrans:
