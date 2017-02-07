@@ -8,13 +8,18 @@ do
 	cd $dir
 	file=`ls -1 *.out`
 	echo $file
+
+	python $pack/elec_spec.py $file
+
 	python $pack/getTrans.py $file $ntrans > TransLabels.in
 	python $pack//list_orbs.py $file > TRANS.txt
+
 	namespec="$file"_"$ntrans"_trans.txt
 	python $pack/sum_spec_broadening.py $namespec
-	nameoutspec=`echo "$file" | cut -d'.' -f1`
+	python $pack/sum_spec_broadening_WithoutNorm.py $namespec
 
 #	gnuplot check // begin
+	nameoutspec=`echo "$file" | cut -d'.' -f1`
 	echo $nameoutspec
 	nameoutspec="$nameoutspec""full-UV_Lbroad-10nm.dat"
 	echo $nameoutspec
